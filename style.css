@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
 *{
-   margin: 0; 
+   margin: auto; 
    padding: 0;
    box-sizing: border-box;
    font-family:'Urbanist', sans-serif ;
 }
 .container-general{
     max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
 
 }
 
@@ -31,6 +35,12 @@
     
     margin-left: 250px;
 }
+.container-iconos{
+    display: flex;
+    flex-direction: row;
+    background-color: cyan;
+   
+}
 .icono-breakfast{
     width: 40px;
     height: 40px;  
@@ -39,3 +49,37 @@
     width: 40px;
     height: 40px;  
 } 
+.icono-dinner{
+    width: 40px;
+    height: 40px;   
+}
+.container-fotos-comida{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    background-color: chartreuse;
+}
+.container-food{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+background-color: crimson;
+}
+.box-foto-food{
+    width: 60%;
+    height: 60%;
+    margin-top: 5%;
+    
+
+}
+
+.imgfood{
+    width: 100%;
+    height: 100%;
+}
+.info-contador{
+    width: 40%;
+    height: 60%;
+    background-color:blueviolet;
+}
