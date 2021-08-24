@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+*{
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   font-family:'Urbanist', sans-serif ;
+}
+.container-general{
+    max-width: 600px;
+
+}
+
+.container-header{
+    display: flex;
+    flex-direction: column;
+    padding: 9px;
+    background-color: chocolate;
+    font-size: small;
+
+}
+.tittle-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    font-family:'Urbanist', sans-serif;
+}
+.iconoMenu{
+    width: 20px;
+    height: 20px;
+    
+    margin-left: 250px;
+}
+.icono-breakfast{
+    width: 40px;
+    height: 40px;  
+}
+.icono-fastFood{
+    width: 40px;
+    height: 40px;  
+} 
