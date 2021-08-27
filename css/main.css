@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
- 
+@import url('/Food-Home/css/style.css.css');
 
 @media  (max-width: 812px) {
     .container-general{
@@ -77,11 +77,15 @@
 .main{
     display: flex;
     flex-direction: column;
+    padding-top: 10%;
     
 }
 @media(min-width:700px){
     .main{
         flex-direction: row;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 .icono-container{
@@ -137,10 +141,10 @@ width: auto;
     margin:5%;
     
   }
-  @media(min-width:900px){
+  @media(min-width:700px){
     .container-img{
-       width: 200px;
-       height: 200px;
+       width: 180px;
+       height: 180px;
     }
 }
   .imgfood{
@@ -210,6 +214,7 @@ button{
     box-shadow: 2px 2px 20px rgb(214, 214, 224);
     border: none;
     background-color: rgb(240, 231, 231);
+    text-align: center;
 
 
 }
@@ -223,20 +228,19 @@ input[type=number]::-webkit-outer-spin-button {
   #cesta{
  
     border-radius: 50%;
-    margin-left: 45%;
-    
-    height:20%px;
-    width:20%;
+    height:15%;
+    width:15%;
     background-color: orangered;
     position: relative;
+    left: 40%;
     box-shadow: 5px 5px 10px rgb(63, 60, 60);
   } 
  
 
-    @media(max-width:900px){
+    @media(min-width:700px){
         #cesta{
-            height:40px;
-            width:40px;
+            height:60px;
+            width:60px;
            
          }
      }
@@ -245,9 +249,6 @@ input[type=number]::-webkit-outer-spin-button {
   .imgcesta{
      height:50%; 
      width: 50%;
-     margin-top: 20%;
-     
-     position: re;
      
   }
 footer{
@@ -255,30 +256,30 @@ footer{
       flex-direction: row;
      align-items: baseline;
      margin-bottom: 10%;
-    
+     padding-top: 5%;
       
   }
   .icono-footer1{
       height:60%;
-      width: 7%;
+      width: 12%;
    
   }   
       
   
   .icono-footer2{
     height:60%;
-      width: 7%;
+      width: 12%;
    
   }
   .icono-footer3{
     height:60%;
-      width: 7%;
+      width: 12%;
     
     
 }
 .icono-footer4{
     height:60%;
-    width: 7%;
+    width: 12%;
 }
 .contenedor-iconos-uno{
 display: flex;

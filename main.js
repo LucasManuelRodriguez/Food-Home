@@ -1,9 +1,15 @@
-let addToShoppingCartButtons = document.querySelectorAll(".addToCart");
-addToShoppingCartButtons.forEach((addToCartButton)=>{addToCartButtons.addEventListener("click",addToCartClicked);});
+document.addEventListener('click', function (event) {
+    let sumar = event.target.dataset.sumar;
+        if(sumar){
+            let contador = document.getElementById('contador');
+            let contadorText = contador.value;
+            let contadorNum = parseInt(contadorText);
+                for(let i = 0; i<contadorNum; i++) {
+                    contadorNum
+                console.log(contadorNum);   
+            }
+        }
+})
 
-function addToCartCliked(event){
-    let button = event.target;
-    let conatinerImg = buttom.closest(".container-img");
 
-    let conatinerImgTitle = containerImg.querySelector(".containerImg-title");
-}
+
