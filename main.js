@@ -1,4 +1,4 @@
-document.addEventListener('click', function (event) {
+document.addEventListener('click', function quePasaCuandoHagoClick(event) {
     let dondeHiceClick = event.target;
     console.log(dondeHiceClick.id);
 
@@ -14,8 +14,10 @@ document.addEventListener('click', function (event) {
             let contadorText = contador.value;
             let contadorInt = parseInt(contadorText); 
             contador.value = contadorInt - 1;  
-            }
+              }
     }
+
+    
 )
 
 
