@@ -1,15 +1,22 @@
 document.addEventListener('click', function (event) {
-    let sumar = event.target.dataset.sumar;
-        if(sumar){
-            let contador = document.getElementById('contador');
+    let dondeHiceClick = event.target;
+    console.log(dondeHiceClick.id);
+
+        if('sumarSalad' == dondeHiceClick.id){
+            let contador = document.getElementById('contadorSalad');
             let contadorText = contador.value;
-            let contadorNum = parseInt(contadorText);
-                for(let i = 0; i<contadorNum; i++) {
-                    contadorNum
-                console.log(contadorNum);   
+            let contadorInt = parseInt(contadorText); 
+            contador.value = contadorInt + 1;  
             }
-        }
-})
+
+        if('restarSalad' == dondeHiceClick.id){
+            let contador = document.getElementById('contadorSalad');
+            let contadorText = contador.value;
+            let contadorInt = parseInt(contadorText); 
+            contador.value = contadorInt - 1;  
+            }
+    }
+)
 
 
 
