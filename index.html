@@ -15,14 +15,11 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container container-general">
       <!-- Container 1-->
         <div class="header">
             <div class="tittle-menu">
                  <p class="foodHouse">Food House</p>
-            <button class="icono-menu">
-                <img class="iconoMenu" src="./iconos/boton-de-menu-de-tres-lineas-horizontales.png" alt="menu">
-            </button>
             </div>
             <div class="subtittle-lorem">
                 <h1>Food for Home</h1>
@@ -43,62 +40,60 @@
                     <p class="icono-text">Dinner</p>
                 </button>
         </div>
-        <div class="main">
-            <div class="container-food"> 
-                <button class="container-img" id="add to card">
-                    <img class="imgfood" src="./fotos comida/chiken-salad.jfif" alt="chicken">
-                </button>      
-                <div class="info-contador">
-                    <div class="info">
-                    <p class="nombrecomida">Chicken Veggi Salad</p>
-                    <p class="ingrediente">With cheese sauce</p>
-                    <p class="price">$52.00</p>
-                    </div>
-                    <div class="contador"> 
-                        <button id='restarSalad' class="restar">-</button>  
-                        <input id="contadorSalad" type="number" class="input-contador"size="5" max-length="2" value="02">   
-                        <button id='sumarSalad' data-sumar="sumar" class="sumar">+</button>
-                    </div>
-                </div>                     
-            </div>  
-            <div class="container-food"> 
-                    <button class="container-img" id="add to cart">
-                    <img class="imgfood" src="./fotos comida/Mutton-Curry.jpg" alt="Mutton">
-                    </button>
-                <div class="info-contador">
-                    <div class="info">
-                        <p class="nombrecomida">Mutton Curry</p>
-                        <p class="ingrediente">With basmatti rice</p>
-                        <p class="price">$23.00</p>
-                    </div>
-                    <div class="contador">   
-                        <button id='restarCurry' class="restar">-</button>  
-                        <input id='contadorCurry' type="number" class="input-contador"size="5" max-length="2" value="01">   
-                        <button id='sumarCurry' class="sumar">+</button>
-                    </div>
-                        
-                </div>  
-            </div>  
-            <div class="container-food">                 
-                    <button class="container-img" id="add to card">
-                    <img class="imgfood" src="./fotos comida/french-fryes.jfif" alt="frech fry">
-                    </button> 
-                <div class="info-contador">
-                    <div class="info">
-                        <p class="nombrecomida"> French Fry</p>
-                        <p class="ingrediente">With  beef bacon</p>
-                        <p class="price">$21.00</p>
-                    </div>
-                    <div class="contador">
-                    
-                        <button class="restar">-</button>  
-                        <input id='contadorFry' type="number" class="input-contador"size="5" max-length="2" value="01" onclick="sumar()" >   
-                        <button class="sumar"id="sumar">+</button>      
-                    </div>  
-                </div>    
+        <main>
+          <div class="containerFood">
+            <div class="col-md-6 box-foto">
+              <img class="img-fluid" src="fotos comida/chiken-salad.jfif" alt="Comida Chicken">
             </div>
-        </div>
-        <button class="Cestacompra" id="cestaButton"><img class="imgcesta" src="./iconos/anadir-al-carrito.png"></button>
+            <div class="info-contador">
+              <div class="info_food">
+                <p class="precio_food"><span>$</span>52.00</p>
+                <h6 class="name_food">Chicken Veggi Salad</h6>
+                <p class="description_food">With cheese sauce</p>
+              </div>
+              <div class="contador_food">
+                    <button class="restar">-</button>  
+                    <input type="number" class="num_contador"size="5" max-length="2" value="02">   
+                    <button class="sumar">+</button>
+            </div>
+            </div>
+          </div>
+          <div class="containerFood">
+            <div class="col-md-6 box-foto">
+              <img  class="img-fluid" src="./fotos comida/Mutton-Curry.jpg" alt="Comida Mutton-Curry">
+            </div>
+            <div class="info-contador">
+              <div class="info_food">
+                <p class="precio_food"><span>$</span>23.00</p>
+                <h6 class="name_food">Mutton-Curry</h6>
+                <p class="description_food">With basmatti rice</p>
+              </div>
+              <div class="contador_food">
+                <button class="restar">-</button>  
+                    <input type="number" class="num_contador"size="5" max-length="2" value="01" >   
+                    <button class="sumar">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="containerFood">
+            <div class="col-md-6 box-foto">
+              <img class="img-fluid" src="./fotos comida/french-fryes.jfif" alt="Comida Chicken">
+            </div>
+            <div class="info-contador">
+              <div class="info_food">
+                <p class="precio_food"><span>$</span>52.00</p>
+                <h6 class="name_food">Chicken Veggi Salad</h6>
+                <p class="description_food">With cheese sauce</p>
+              </div>
+              <div class="contador_food">
+                <button class="restar">-</button>  
+                    <input type="number" class="num_contador"size="5" max-length="2" value="01">   
+                    <button class="sumar">+</button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <button class="cestaCompra" id="cestaButton"><img class="imgcesta" src="./iconos/anadir-al-carrito.png" alt="cesta"></button>
         <footer>
             <div class="contenedor-iconos-uno">
             <img class="icono-footer1" src="./iconos/home.png" alt="home">
@@ -111,7 +106,7 @@
         </footer>
     </div>
 
-    <div id='cesta' class="container bloqueado">  
+    <div class="container movil2-bloqueado">  
       <!-- Contenedor 2, Cuando se ve este contenedor? -->
             <header>
               <div>

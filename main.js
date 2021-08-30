@@ -1,4 +1,4 @@
-document.addEventListener('click', function quePasaCuandoHagoClick(event) {
+document.addEventListener('click', function(event) {
     let dondeHiceClick = event.target;
     console.log(dondeHiceClick.id);
 

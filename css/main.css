@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
 @import url('/Food-Home/css/style.css.css');
-
-@media  (max-width: 812px) {
-    .container-general{
-        max-width: 1080px;
-    }
- }
 *{
    margin: 0; 
    padding: 0;
@@ -22,7 +16,13 @@
     flex-direction: column;
     border-radius: 5%;
     box-shadow: 1px 1px 40px rgb(156, 148, 148);
+    position:relative;
 }
+@media  (max-width: 812px) {
+    .container-general{
+        max-width: 1080px;
+    }
+ }
 
 .header{
     display: flex;
@@ -120,16 +120,6 @@
     height: 40%;
 } 
 
-
-
-.container-food{
-display: flex;
-flex-direction: row;
-height: auto;
-width: auto;
-
-
-}
 .container-img{
     
     display: flex;
@@ -147,21 +137,8 @@ width: auto;
        height: 180px;
     }
 }
-  .imgfood{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
 
 
-
-
-.info-contador{
-    width: 45%;
-    height:100%;
-    
-    margin-left:2%;
-}
 .price{
    
     margin-bottom: 2%;
@@ -220,25 +197,28 @@ button{
 }
 
   
-    input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
-  #cesta{
- 
-    border-radius: 50%;
-    height:15%;
-    width:15%;
-    background-color: orangered;
-    position: relative;
-    left: 40%;
-    box-shadow: 5px 5px 10px rgb(63, 60, 60);
+  .cestaCompra{
+    border-radius: 50% !important;
+    height: 50px !important;
+    width: 50px !important;
+    background-color: orangered !important;
+    position: relative !important;
+    left: 45% !important;
+    box-shadow: 5px 5px 10px rgb(63 60 60) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   } 
  
 
     @media(min-width:700px){
-        #cesta{
+        .cestaCompra{
             height:60px;
             width:60px;
            
@@ -247,9 +227,9 @@ input[type=number]::-webkit-outer-spin-button {
         
 
   .imgcesta{
-     height:50%; 
-     width: 50%;
-     
+    height: 30px;
+    width: 30px;
+    z-index: 1;
   }
 footer{
       display: flex;

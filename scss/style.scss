@@ -1,5 +1,6 @@
-.bloqueado{
+.movil2-bloqueado{
     display: none !important;
+    padding-top: 10% !important;
 }
 
 header{
@@ -13,15 +14,12 @@ header{
         height: 9%;
         padding-top: 5%;
     }
-    .back{
-        background-color:#80808021;
-    }
     .iconHeader{
         width: 100%;
         height: 100%;
         border-style: none;
-        background-color:white;
-        
+        background-color:#80808021;
+        border-radius: 20%;     
     }
     svg{
         width: 100%;
