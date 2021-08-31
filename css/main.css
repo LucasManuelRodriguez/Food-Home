@@ -15,10 +15,9 @@
     display: flex;
     flex-direction: column;
     border-radius: 5%;
-    box-shadow: 1px 1px 40px rgb(156, 148, 148);
     position:relative;
 }
-@media  (max-width: 812px) {
+@media (min-width:700px){
     .container-general{
         max-width: 1080px;
     }
@@ -58,6 +57,11 @@
     width: 100%;
     margin: auto;
 }
+@media(min-width:700px){
+    .foodHouse{
+        font-size: 20px !important;
+    }
+}
 .lorem{
     
     opacity: 30%;
@@ -73,20 +77,6 @@
   
     
     justify-content:space-around;
-}
-.main{
-    display: flex;
-    flex-direction: column;
-    padding-top: 10%;
-    
-}
-@media(min-width:700px){
-    .main{
-        flex-direction: row;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
 }
 .icono-container{
     
@@ -108,7 +98,7 @@
 
 
 .icono-text{
-    font-size:10px;
+    font-size:15px;
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -119,6 +109,7 @@
     width: 40%;
     height: 40%;
 } 
+
 
 .container-img{
     
@@ -136,31 +127,10 @@
        width: 180px;
        height: 180px;
     }
+
 }
 
 
-.price{
-   
-    margin-bottom: 2%;
-    margin-left: 16%;
-    font-size:x-small;
-    color: orangered;
-    font-weight: bolder;
-}
-.nombrecomida{
-    margin-top:20%;
-    margin-left:12%;
-    margin-bottom: 0%;
-    font-weight:bolder;
-    font-size:80%;
-}
-.ingrediente{
-   
-    font-size: xx-small;
-    margin: 0;
-    margin-left:12% ;
-    opacity: 50%;
-}
 button{
    display: flex;
    justify-content: center;
@@ -171,7 +141,6 @@ button{
     background-color: white;
     
 }
-
 
 .contador{
     display: flex;
@@ -219,9 +188,14 @@ input[type=number]::-webkit-outer-spin-button {
 
     @media(min-width:700px){
         .cestaCompra{
-            height:60px;
-            width:60px;
-           
+            height: 75px !important;
+            width: 75px !important;
+            top: 5rem !important;
+                
+         }
+         .imgcesta{
+             height: 45px !important;
+             width: 45px !important;
          }
      }
         
