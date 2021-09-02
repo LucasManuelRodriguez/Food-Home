@@ -1,3 +1,5 @@
+
+
 .movil2-bloqueado{
     display: none !important;
     max-width: 1080px;
@@ -40,6 +42,18 @@
         .name_food{
             font-size: 23px !important;
         }
+        ::-webkit-scrollbar {
+            height: 7px;
+            background: #fff;
+         
+         }
+         
+         ::-webkit-scrollbar-thumb {
+         
+            height: 7px;
+            background: black;
+         }
+    
     }
     .main_movil2{
         flex-direction: column !important;
