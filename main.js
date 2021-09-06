@@ -1,38 +1,22 @@
-
-let cantidades = []
 function sumarC (indice){
-    let contador = document.getElementById(indice);
-    let textoContador = contador.value;
-    let cantidad = Menu[indice].cantidad ++;
-    let numeroContador = parseInt(textoContador);
-    numeroContador = cantidad +1 ;
-    contador.value = numeroContador;
-    Menu.flatMap((elemento, indice) => cantidades.push(elemento.cantidad));
-    console.log(cantidades)
-    console.log(cantidad+1)
+    Menu[indice].cantidad++;
+    loadPlatos()
     console.log(Menu)
-    console.log(contador)
 }
 function restarC (indice){
-    let contador = document.getElementById(indice);
-    let textoContador = contador.value;
-    if(textoContador > 0){
-        let cantidad = Menu[indice].cantidad --;
-        let numeroContador = parseInt(textoContador);
-        numeroContador = cantidad -1;
-        contador.value = numeroContador;
-        console.log(numeroContador)
+    if(Menu[indice].cantidad > 0){
+        Menu[indice].cantidad--
+        loadPlatos()
         console.log(Menu)
-        console.log(contador);
-    }
-
+    } 
 }
 
 document.addEventListener('click', function(event) {
         let sumar = event.target.dataset.sumar
         let restar = event.target.dataset.restar
         if(sumar){
-            sumarC(sumar);
+            sumarC(sumar)
+            
         }
         if(restar){
             restarC(restar);
@@ -76,11 +60,11 @@ let Menu =
     }
  ];
 
-let platoMenu ="";
 
-function printPlatos(elementos, indice){
 
-    platoMenu += `<div class="containerFood">
+function printPlato(elementos, indice){
+
+    elementosMenu.innerHTML +=`<div class="containerFood">
 
                         <div class="col-md-6 box-foto">
                             <img class="img-fluid" src= ${elementos.imagen} alt= ${elementos.alt}>
@@ -108,17 +92,12 @@ function printPlatos(elementos, indice){
                         </div>
                     </div>
                 </div>`;
-                
-
-elementosMenu.innerHTML=platoMenu;
-
 }
 
-console.log(printPlatos);
 
 function loadPlatos(){
-
-Menu.forEach((elemento, index)=>printPlatos(elemento, index));
+elementosMenu.innerHTML = ""
+Menu.forEach((elemento, index)=>printPlato(elemento, index));
 }//index=posicón de cada uno de los elementos en el array menú 
 
 loadPlatos();
