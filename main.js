@@ -1,13 +1,21 @@
-function sumarC (indice){
+
+function sumarCantidades (indice){
     Menu[indice].cantidad++;
-    loadPlatos()
-    console.log(Menu)
+    loadPlatos() 
+    console.log(carrito)
 }
-function restarC (indice){
+
+let carrito = [];
+
+function upDateCarrito() {
+    carrito = Menu.filter(element => element.cantidad > 0)
+}
+function restarCantidades (indice){
     if(Menu[indice].cantidad > 0){
         Menu[indice].cantidad--
         loadPlatos()
-        console.log(Menu)
+        let carrito = Menu.filter(element => element.cantidad > 0) 
+        console.log(carrito)
     } 
 }
 
@@ -15,11 +23,11 @@ document.addEventListener('click', function(event) {
         let sumar = event.target.dataset.sumar
         let restar = event.target.dataset.restar
         if(sumar){
-            sumarC(sumar)
+            sumarCantidades(sumar)
             
         }
         if(restar){
-            restarC(restar);
+            restarCantidades(restar);
         }
     });
 
@@ -31,7 +39,7 @@ let Menu =
         id: "Chiken Salad",
         nombre: 'Chicken Veggi Salad',
         description: 'With cheese sauce',
-        price: '52.00',
+        price: 52.5,
         imagen: "fotoscomida/chiken-salad.jfif",
         alt:"comida Chiken",
         cantidad: 0
@@ -61,6 +69,8 @@ let Menu =
  ];
 
 
+ 
+
 
 function printPlato(elementos, indice){
 
@@ -86,7 +96,7 @@ function printPlato(elementos, indice){
                         
 
                                 <button data-restar = "${indice}" class="restar">-</button> 
-                                <input id="${indice}" type="number" class="num_contador" size="5" max-length="2" value="${elementos.cantidad}">   
+                                <input  type="number" class="num_contador" size="5" max-length="2" value="${elementos.cantidad}">   
                                 <button data-sumar ="${indice}" class="sumar">+</button> 
 
                         </div>
@@ -98,6 +108,7 @@ function printPlato(elementos, indice){
 function loadPlatos(){
 elementosMenu.innerHTML = ""
 Menu.forEach((elemento, index)=>printPlato(elemento, index));
+upDateCarrito();
 }//index=posicón de cada uno de los elementos en el array menú 
 
 loadPlatos();
