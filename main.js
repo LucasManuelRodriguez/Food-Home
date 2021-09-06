@@ -1,48 +1,45 @@
 
-let totalItems= document.getElementById("totalItems");
+let cantidades = []
+function sumarC (indice){
+    let contador = document.getElementById(indice);
+    let textoContador = contador.value;
+    let cantidad = Menu[indice].cantidad ++;
+    let numeroContador = parseInt(textoContador);
+    numeroContador = cantidad +1 ;
+    contador.value = numeroContador;
+    Menu.flatMap((elemento, indice) => cantidades.push(elemento.cantidad));
+    console.log(cantidades)
+    console.log(cantidad+1)
+    console.log(Menu)
+    console.log(contador)
+}
+function restarC (indice){
+    let contador = document.getElementById(indice);
+    let textoContador = contador.value;
+    if(textoContador > 0){
+        let cantidad = Menu[indice].cantidad --;
+        let numeroContador = parseInt(textoContador);
+        numeroContador = cantidad -1;
+        contador.value = numeroContador;
+        console.log(numeroContador)
+        console.log(Menu)
+        console.log(contador);
+    }
 
+}
 
 document.addEventListener('click', function(event) {
-
-
-let dondeHagoClick= event.target;
-
-
-console.log(dondeHagoClick);
-
-    
-        let contadorBoton = "contador"+dondeHagoClick.parentElement.id; 
-
-        console.log(contadorBoton);//el contadorBoton es el identificador del id de cada contador//
-
-        let contador = document.getElementById(contadorBoton);
-
-       
-        let contadorText=contador.value;
-
-    
-        let contadorNum = parseInt(contadorText);
-
-        contador.value=dondeHagoClick.className=="sumar" ? contadorNum + 1 : contadorNum - 1;
-
-        let Nuevocontador=parseInt(contador.value);
-
-        totalItems.innerHTML=Nuevocontador;
-        localStorage.getItem(contadorBoton);
-    
-
-        localStorage.setItem(contadorBoton,Nuevocontador);
-
-         
-       
+        let sumar = event.target.dataset.sumar
+        let restar = event.target.dataset.restar
+        if(sumar){
+            sumarC(sumar);
+        }
+        if(restar){
+            restarC(restar);
+        }
     });
 
 let elementosMenu=document.getElementById("containerPlatos"); 
-
-
-
-
-
 
 let Menu = 
 [
@@ -52,7 +49,8 @@ let Menu =
         description: 'With cheese sauce',
         price: '52.00',
         imagen: "fotoscomida/chiken-salad.jfif",
-        alt:"comida Chiken"
+        alt:"comida Chiken",
+        cantidad: 0
 
     },
     {
@@ -61,7 +59,8 @@ let Menu =
         description: '',
         price: '52.00',
         imagen: 'fotoscomida/Mutton-Curry.jpg',
-        alt:"comida Chiken"
+        alt:"comida Chiken",
+        cantidad: 0
 
     },
     {
@@ -70,63 +69,41 @@ let Menu =
         description: 'With cheese sauce',
         price: '52.00',
         imagen: 'fotoscomida/french-fryes.jfif',
-        alt:"comida Chiken"
+        alt:"comida Chiken",
+        cantidad: 0
 
-    },
-    {
-        id: "Soap",
-        nombre: 'Soap',
-        description: 'With cheese sauce',
-        price: '52.00',
-        imagen: "fotoscomida/comidabonita.jpg",
-        alt:"comida Chiken"
 
-    },
-    {
-        id: "plato5",
-        nombre: 'Chicken Veggi Salad',
-        description: 'With cheese sauce',
-        price: '52.00',
-        imagen: 'fotoscomida/Mutton-Curry.jpg'
-    },
-    {
-        id: "plato6",
-        nombre: 'Chicken Veggi Salad',
-        description: 'With cheese sauce',
-        price: '52.00',
-        imagen: 'fotoscomida/french-fryes.jfif',
-        alt:"comida Chiken"
     }
  ];
 
 let platoMenu ="";
 
-function printPlatos(itemsMenu){
+function printPlatos(elementos, indice){
 
     platoMenu += `<div class="containerFood">
 
                         <div class="col-md-6 box-foto">
-                            <img class="img-fluid" src= ${Menu[itemsMenu].imagen} alt= ${Menu[itemsMenu].alt}>
+                            <img class="img-fluid" src= ${elementos.imagen} alt= ${elementos.alt}>
                         </div>
 
                         <div class="info-contador">
                             <div class="info_food">
                             <p class="precio_food"><span>$</span>
-                             ${Menu[itemsMenu].price}
+                             ${elementos.price}
                              </p>
                             <h6 class="name_food">
-                             ${Menu[itemsMenu].nombre}
+                             ${elementos.nombre}
                              </h6>
                             <p class="description_food">
-                            ${Menu[itemsMenu].description}</p>
+                            ${elementos.description}</p>
                         </div>
 
-                        <div class="contador_food" id="${Menu[itemsMenu].id}">
+                        <div class="contador_food" id="${elementos.id}">
                         
 
-                                <button id="${"delete"+Menu[itemsMenu].id}" class="restar">-</button> 
-                                <input id="${'contador'+Menu[itemsMenu].id}" type="number" class="num_contador" size="5" max-length="2" value="0">   
-                                <button id="${"add"+Menu[itemsMenu].id}" class="sumar">+</button> 
+                                <button data-restar = "${indice}" class="restar">-</button> 
+                                <input id="${indice}" type="number" class="num_contador" size="5" max-length="2" value="${elementos.cantidad}">   
+                                <button data-sumar ="${indice}" class="sumar">+</button> 
 
                         </div>
                     </div>
@@ -141,7 +118,7 @@ console.log(printPlatos);
 
 function loadPlatos(){
 
-Menu.forEach((elemento, index)=>printPlatos(index));
+Menu.forEach((elemento, index)=>printPlatos(elemento, index));
 }//index=posicón de cada uno de los elementos en el array menú 
 
 loadPlatos();
