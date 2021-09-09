@@ -1,5 +1,11 @@
 .movil2-bloqueado {
-  display: none !important;
+  display: none;
+  max-width: 1080px;
+  box-shadow: inset 75px 0px 100px 0 #00000017;
+}
+
+.desbloqueado {
+  display: inherit;
   max-width: 1080px;
   box-shadow: inset 75px 0px 100px 0 #00000017;
 }
@@ -37,6 +43,14 @@
   }
   .main_movil1 .name_food {
     font-size: 23px !important;
+  }
+  .main_movil1 ::-webkit-scrollbar {
+    height: 7px;
+    background: #fff;
+  }
+  .main_movil1 ::-webkit-scrollbar-thumb {
+    height: 7px;
+    background: black;
   }
 
   .main_movil2 {

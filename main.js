@@ -2,10 +2,11 @@
 function sumarCantidades (indice){
     Menu[indice].cantidad++;
     loadPlatos() 
-    console.log(carrito)
 }
 
 let carrito = [];
+
+
 
 function upDateCarrito() {
     carrito = Menu.filter(element => element.cantidad > 0)
@@ -14,20 +15,41 @@ function restarCantidades (indice){
     if(Menu[indice].cantidad > 0){
         Menu[indice].cantidad--
         loadPlatos()
-        let carrito = Menu.filter(element => element.cantidad > 0) 
-        console.log(carrito)
     } 
+}
+
+function cambiarPagina(){
+    ocultarPagUno();
+    mostrarPagDos();
+}
+
+function ocultarPagUno(){
+    let pagUno = document.getElementById('pagUno');
+    pagUno.classList.add('ocultar');
+    console.log('oculté')
+}
+
+function mostrarPagDos(){
+    let pagDos = document.getElementById('pagDos');
+    pagDos.classList.remove('movil2_bloqueado');
+    pagDos.classList.add('desbloqueado');
+    console.log('desbloqueadooo')
 }
 
 document.addEventListener('click', function(event) {
         let sumar = event.target.dataset.sumar
         let restar = event.target.dataset.restar
+        let cesta = event.target.dataset.cesta
+
         if(sumar){
             sumarCantidades(sumar)
             
         }
         if(restar){
             restarCantidades(restar);
+        }
+        if(cesta){
+            cambiarPagina();
         }
     });
 
@@ -112,7 +134,6 @@ upDateCarrito();
 }//index=posicón de cada uno de los elementos en el array menú 
 
 loadPlatos();
-
 
 
 

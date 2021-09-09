@@ -1,13 +1,14 @@
-
-
 .movil2-bloqueado{
-    display: none !important;
+    display: none;
     max-width: 1080px;
-    box-shadow: inset 75px 0px 100px 0 #00000017;
-
+    box-shadow: inset 75px 0px 100px 0 #00000017;   
 }
 
-// medias
+.desbloqueado{
+    display: inherit ;
+    max-width: 1080px;
+    box-shadow: inset 75px 0px 100px 0 #00000017;   
+}
 @media(min-width:700px){
         .main_movil1{
         flex-direction: row !important;

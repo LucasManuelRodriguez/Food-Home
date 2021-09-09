@@ -8,7 +8,7 @@
    width: 100%;
 }
 
-.container-general{
+.general{
     max-width: 600px;
     width: 100%;
     height: 100%;
@@ -16,6 +16,9 @@
     flex-direction: column;
     border-radius: 5%;
     position:relative;
+}
+.ocultar{
+    display:none;
 }
 @media (min-width:700px){
     .container-general{
