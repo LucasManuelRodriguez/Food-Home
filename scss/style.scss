@@ -166,6 +166,7 @@ main{
     .containerPlatos{
         display: flex !important;
         flex-direction: column;
+        margin-bottom: 250px;
     }
     .containerFood{
         display: flex;
@@ -275,6 +276,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
     .resumen{
         display: flex;
         flex-direction: row;

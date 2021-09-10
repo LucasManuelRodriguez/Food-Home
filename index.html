@@ -50,7 +50,7 @@
 
         <button class="cestaCompra" id="cestaButton"> <img data-cesta="cesta" class="imgcesta" src="./iconos/anadir-al-carrito.png" alt="cesta"></button>
 
-        <div id="totalItems" class="totalItems"></div>
+        <div id="totalItems" class="totalItems" >  </div>
 
 
         <footer>
@@ -70,7 +70,7 @@
             <header>
               <div>
                 <button class="iconHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-left back" viewBox="0 0 16 16">
+                    <svg data-back="back" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-left back" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                     </svg>
                 </button>
@@ -86,81 +86,28 @@
             </header>
             <main class="main_movil2">
               <h4>My Cart</h4>
-              <div id="containerPlatos2" class="containerPlatos">
-                <div class="containerFood">
-                  <div class="col-md-6 box-foto">
-                    <img class="img-fluid" src="fotos comida/chiken-salad.jfif" alt="Comida Chicken">
-                  </div>
-                  <div class="info-contador">
-                    <div class="info_food">
-                      <p class="precio_food"><span>$</span>52.00</p>
-                      <h6 class="name_food">Chicken Veggi Salad</h6>
-                      <p class="description_food">With cheese sauce</p>
-                    </div>
-                    <div class="contador_food">
-                          <button class="restar">-</button>  
-                          <input type="number" class="num_contador"size="5" max-length="2" value="02">   
-                          <button class="sumar">+</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="containerFood">
-                  <div class="col-md-6 box-foto">
-                    <img  class="img-fluid" src="./fotos comida/Mutton-Curry.jpg" alt="Comida Mutton-Curry">
-                  </div>
-                  <div class="info-contador">
-                    <div class="info_food">
-                      <p class="precio_food"><span>$</span>23.00</p>
-                      <h6 class="name_food">Mutton-Curry</h6>
-                      <p class="description_food">With basmatti rice</p>
-                    </div>
-                    <div class="contador_food">
-                      <button class="restar">-</button>  
-                          <input type="number" class="num_contador"size="5" max-length="2" value="01" >   
-                          <button class="sumar">+</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="containerFood">
-                  <div class="col-md-6 box-foto">
-                    <img class="img-fluid" src="./fotos comida/french-fryes.jfif" alt="Comida Chicken">
-                  </div>
-                  <div class="info-contador">
-                    <div class="info_food">
-                      <p class="precio_food"><span>$</span>52.00</p>
-                      <h6 class="name_food">Chicken Veggi Salad</h6>
-                      <p class="description_food">With cheese sauce</p>
-                    </div>
-                    <div class="contador_food">
-                      <button class="restar">-</button>  
-                          <input type="number" class="num_contador"size="5" max-length="2" value="01">   
-                          <button class="sumar">+</button>
-                    </div>
-                  </div>
-                </div>
+              <div id="containerPlatos2" class="containerPlatos"
+              >
               </div>  
             </main>
             <section class="cta">
                 <div class="resumen">
                     <div class="texto_resumen">
-                        <p>Subtotal</p>
-                        <p>Tax & Fees</p>
+                       
                         <p>Delivery</p>
                         <p>TOTAL</p>
                     </div>
                     <div class="price_resumen">
-                        <p>$96.00</p>
-                        <p>$2.00</p>
+                      
                         <p>Free</p>
-                        <p class="price_total">$98.00</p>
+                        <p id="price-total">$98.00</p>
                     </div>
                 </div>
-                <button class="enviar">
+                <button onclick="crearMensaje()" class="enviar">
                     <h6>Enviar pedido</h6>    
                 </button>
             </section>
     </div>
 <script src="./main.js"></script>
-<script src="./carrito.js"></script>
 </body>
 </html>

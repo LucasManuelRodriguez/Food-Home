@@ -20,6 +20,9 @@
 .ocultar{
     display:none;
 }
+.mostrar{
+    display:inherit;
+}
 @media (min-width:700px){
     .container-general{
         max-width: 1080px;
